@@ -1,0 +1,20 @@
+{% extends "base.html" %}  
+{% block content %}
+   
+<div class="container-md">
+    <div class="col-lg-6 mb-4">
+      <div class="" >
+        <h5 class="card-title">Detected Ships</h5>
+        <video autoplay controls loop>
+          <source src="{{ url_for('display_video', filename=out_filename) }}" type="video/mp4"></source>
+          Your browser does not support the video tag
+        </video>
+        <div class="card-body">
+          <a  class="btn btn-info"  href="{{ url_for('display_video', filename=out_filename) }}"  title="VideoName" download>
+             Download</a>
+        </div>
+      </div>
+    </div>
+</div>
+
+{% endblock %}

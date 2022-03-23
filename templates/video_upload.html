@@ -1,0 +1,25 @@
+{% extends "base.html" %}  
+{% block content %}
+   
+<div class="container-md">
+  <div class="row align-items-start">
+    <div class="col-lg-6 mb-4">
+      <div class="card form-control">
+        <img src="" class="card-img-top" alt="">
+  
+        <div class="card-body">
+          <h5 class="card-title">Upload Video</h5>
+          <br>
+          <form action = "/video/success" method = "post" enctype="multipart/form-data">  
+              <input class="btn text-muted" type="file" name="file" required/>
+              <br><br>  
+              <input class="btn btn-info" type= "submit" value="Upload">  
+          </form> 
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

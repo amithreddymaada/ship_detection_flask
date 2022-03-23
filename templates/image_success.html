@@ -1,0 +1,27 @@
+{% extends "base.html" %}  
+{% block content %}
+   
+<div class="container-md">
+  <div class="row align-items-start">
+    <div class="col-lg-6 mb-4">
+      <div class="">
+        <h5 class="card-title">Uploaded Image</h5>
+        <img src="{{ url_for('display_image', filename=input_filename) }}" class="card-img-top" alt="">
+      </div>
+    </div>
+
+    <div class="col-lg-6 mb-4">
+      <div class="" >
+        <h5 class="card-title">Detected Ships</h5>
+        <img src="{{ url_for('display_image', filename=out_filename) }}" alt="..." class="card-img-top">
+        <div class="card-body">
+          <a  class="btn btn-info"  href="{{ url_for('display_image', filename=out_filename) }}"  title="ImageName" download>
+             Download</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}
